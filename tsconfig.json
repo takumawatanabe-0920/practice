@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "noImplicitThis": false,
+    "noImplicitReturns": false,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es2019",
+    "lib": [
+      "dom",
+      "es2019.array"
+    ],
+    "jsx": "react",
+    "rootDirs": [
+      "."
+    ],
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "paths": {
+      // alias
+      "@practice/*": [
+        "src/practice/*"
+      ]
+    },
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false,
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}
