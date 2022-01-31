@@ -27,6 +27,9 @@
       "@app/*": [
         "src/app/*"
       ],
+      "@components/*": [
+        "src/components/*"
+      ],
     },
     "strictNullChecks": false,
     "strictFunctionTypes": false,
