@@ -20,6 +20,7 @@ module.exports = {
     alias: {
       '@practice': path.resolve(__dirname, './src/practice'),
       '@app': path.resolve(__dirname, './src/app'),
+      '@components': path.resolve(__dirname, './src/components'),
     },
   },
   module: {

@@ -1,11 +1,21 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import counterSlice from '@practice/features/counter/counterSlice'
 
-const store = configureStore({
-  reducer: {
-    counter: counterSlice.reducer,
-  },
-})
+// setup 関数を用意してエクスポートする。
+const setupStore = () => {
+  const middlewares = [...getDefaultMiddleware()]
+
+  const store = configureStore({
+    reducer: {
+      counter: counterSlice.reducer,
+    },
+    middleware: middlewares,
+  })
+
+  return store
+}
+
+const store = setupStore()
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>
